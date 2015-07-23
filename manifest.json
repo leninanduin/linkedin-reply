@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+
+  "name": "Linkedin Reply",
+  "description": "Reply messages with a simple click!",
+  "version": "0.1",
+
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "js": ["js/jquery-1.11.1.min.js"],
+    "all_frames":true,
+    "css": ["css/styles.css"]
+  }],
+  "web_accessible_resources":[
+    "css/styles.css"
+  ],
+  "permissions": [
+    "activeTab"
+  ],
+  "browser_action": {
+    "default_icon": "imgs/icon-48.png",
+    "default_popup": "popup.html"
+  },
+  "icons":{
+    "36": "imgs/icon-32.png",
+    "48": "imgs/icon-48.png"
+  }
+}
